@@ -83,52 +83,84 @@
 
     <h5>Publications</h5>
     
-    <div class="gap">
+<!--     <div class="gap">
         <br>
     </div>
-
-    <div class="jumbotron">
-        <h6>Denoising Distant Supervision for Relation Extraction via Instance-Level Adversarial Training.</h6>
-        <p>Existing neural relation extraction (NRE) models rely on distant supervision and suffer from wrong labeling problems. In this paper, we propose a novel adversarial training mechanism over instances for relation extraction to alleviate the noise issue. As compared with previous denoising methods, our proposed method can better discriminate those informative instances from noisy ones. Our method is also efficient and flexible to be applied to various NRE architectures. As shown in the experiments on a large-scale benchmark dataset in relation extraction, our denoising method can effectively filter out noisy instances and achieve significant improvements as compared with the state-of-the-art models.
-        </p>
-        <p>
-        <b>Papers:</b>
-        <br/>
-        <a href="https://arxiv.org/pdf/1805.10959.pdf" target="_blank">Denoising Distant Supervision for Relation Extraction via Instance-Level Adversarial Training.</a> 
-        </p>
+ -->
+<!--     <div type="button" class="jumbotron" style="background-color:#ffffff;margin-bottom:5px;" data-toggle="collapse" 
+            data-target="#denoisingDRE">
+        <h6 style="text-align:left;">Denoising Distant Supervision for Relation Extraction via Instance-Level Adversarial Training. 2018.</h6>
+        <div class="jumbotron collapse in" id="denoisingDRE">
+            <b>Abstract:</b>
+            <p>Existing neural relation extraction (NRE) models rely on distant supervision and suffer from wrong labeling problems. In this paper, we propose a novel adversarial training mechanism over instances for relation extraction to alleviate the noise issue. As compared with previous denoising methods, our proposed method can better discriminate those informative instances from noisy ones. Our method is also efficient and flexible to be applied to various NRE architectures. As shown in the experiments on a large-scale benchmark dataset in relation extraction, our denoising method can effectively filter out noisy instances and achieve significant improvements as compared with the state-of-the-art models.
+            </p>
+            <p>
+            <b>Papers:</b>
+            <br/>
+            <a href="https://arxiv.org/pdf/1805.10959.pdf" target="_blank">Denoising Distant Supervision for Relation Extraction via Instance-Level Adversarial Training.</a> 
+            </p>
+        </div>
     </div>
 
-    <div class="jumbotron">
-        <h6>Adversarial Multi-lingual Neural Relation Extraction (COLING18)</h6>
-        <p>Multi-lingual relation extraction aims to find unknown relational facts from text in various languages. Existing models cannot well capture the consistency and diversity of relation patterns in different languages. To address these issues, we propose an adversarial multi-lingual neural relation extraction (AMNRE) model, which builds both consistent and individual representations for each sentence to consider the consistency and diversity among languages. Further, we adopt an adversarial training strategy to ensure those consistent sentence representations could effectively extract the language-consistent relation patterns. The experimental results on real-world datasets demonstrate that our AMNRE model significantly outperforms the state-of-the-art models.
-        </p>
-        <p>
-        <b>Papers:</b>
-        <br/>
-        <a href="http://nlp.csai.tsinghua.edu.cn/~lzy/publications/coling2018_amnre.pdf" target="_blank">Adversarial Multi-lingual Neural Relation Extraction.</a> (<b>COLING 2018</b>)
-        </p>
-        <p>
-        <b>Code:</b>
-        <br/>
-        <a href="https://github.com/thunlp/AMNRE" target="_blank">[AMNRE]</a>
-        </p>
+
+    <div type="button" class="jumbotron" style="background-color:rgb(0,0,255);margin-bottom:5px;" data-toggle="collapse" 
+            data-target="#AMNRE">
+        <h6 style="text-align:left;">Adversarial Multi-lingual Neural Relation Extraction. COLING 2018.</h6>
+        <div class="jumbotron collapse in" id="AMNRE">
+            <b>Abstract:</b>
+            <p>Multi-lingual relation extraction aims to find unknown relational facts from text in various languages. Existing models cannot well capture the consistency and diversity of relation patterns in different languages. To address these issues, we propose an adversarial multi-lingual neural relation extraction (AMNRE) model, which builds both consistent and individual representations for each sentence to consider the consistency and diversity among languages. Further, we adopt an adversarial training strategy to ensure those consistent sentence representations could effectively extract the language-consistent relation patterns. The experimental results on real-world datasets demonstrate that our AMNRE model significantly outperforms the state-of-the-art models.
+            </p>
+            <p>
+            <b>Papers:</b>
+            <br/>
+            <a href="http://nlp.csai.tsinghua.edu.cn/~lzy/publications/coling2018_amnre.pdf" target="_blank">Adversarial Multi-lingual Neural Relation Extraction.</a> (<b>COLING 2018</b>)
+            </p>
+            <p>
+            <b>Code:</b>
+            <br/>
+            <a href="https://github.com/thunlp/AMNRE" target="_blank">[AMNRE]</a>
+            </p>
+        </div>
     </div>
 
-    <div class="jumbotron">
-        <h6>Neural Knowledge Acquisition via Mutual Attention between Knowledge Graph and Text (AAAI18)</h6>
-        <p>We propose a general joint representation learning framework for knowledge acquisition (KA) on two tasks, knowledge graph completion (KGC) and relation extraction (RE) from text. In this framework, we learn representations of knowledge graphs (KGs) and text within a unified parameter sharing semantic space. To achieve better fusion, we propose an effective mutual attention between KGs and text. The reciprocal attention mechanism enables us to highlight important features and perform better KGC and RE. Different from conventional joint models, no complicated linguistic analysis or strict alignments between KGs and text are required to train our models. Experiments on relation extraction and entity link prediction show that models trained under our joint framework are significantly improved in comparison with other baselines. Most existing methods for KGC and RE can be easily integrated into our framework due to its flexible architectures.</p>
-        <p>
-        <b>Papers:</b>
-        <br/>
-        <a href="https://arxiv.org/abs/1711.11135" target="_blank">Neural Knowledge Acquisition via Mutual Attention between Knowledge Graph and Text</a> (<b>AAAI 2018</b>)
-        </p>
-        <p>
-        <b>Code:</b>
-        <br/>
-        <a href="https://github.com/thunlp/JointNRE" target="_blank">[JointNRE]</a>
-        </p>
-        </p>
+    <div type="button" class="jumbotron" style="background-color:rgb(255,255,255);margin-bottom:5px;" data-toggle="collapse" 
+            data-target="#JointNRE">
+        <h6 style="text-align:left;">Neural Knowledge Acquisition via Mutual Attention between Knowledge Graph and Text. AAAI 2018.</h6>
+        <div class="jumbotron collapse in" id="JointNRE">
+            <b>Abstract:</b>
+            <p>We propose a general joint representation learning framework for knowledge acquisition (KA) on two tasks, knowledge graph completion (KGC) and relation extraction (RE) from text. In this framework, we learn representations of knowledge graphs (KGs) and text within a unified parameter sharing semantic space. To achieve better fusion, we propose an effective mutual attention between KGs and text. The reciprocal attention mechanism enables us to highlight important features and perform better KGC and RE. Different from conventional joint models, no complicated linguistic analysis or strict alignments between KGs and text are required to train our models. Experiments on relation extraction and entity link prediction show that models trained under our joint framework are significantly improved in comparison with other baselines. Most existing methods for KGC and RE can be easily integrated into our framework due to its flexible architectures.</p>
+            <p>
+            <b>Papers:</b>
+            <br/>
+            <a href="https://arxiv.org/abs/1711.11135" target="_blank">Neural Knowledge Acquisition via Mutual Attention between Knowledge Graph and Text</a> (<b>AAAI 2018</b>)
+            </p>
+            <p>
+            <b>Code:</b>
+            <br/>
+            <a href="https://github.com/thunlp/JointNRE" target="_blank">[JointNRE]</a>
+            </p>
+            </p>
+        </div>
     </div>
+
+ -->
+
+
+
+    <p>
+        <table>
+            <tr><td>1. &nbsp;<b>Xu Han</b>, Pengfei Yu, Zhiyuan Liu, Maosong Sun, Peng Li. Hierarchical Relation Extraction with Coarse-to-Fine Grained Attention. EMNLP 2018. Long paper.</td></tr>
+            <tr><td>2. &nbsp;<b>Xu Han</b>, Shulin Cao, Xin Lv, Yankai Lin, Zhiyuan Liu, Maosong Sun and Juanzi Li. OpenKE: An Open Toolkit for Knowledge Embedding. EMNLP 2018. Demo paper.</td></tr>
+            <tr><td>3. &nbsp;<b>Xu Han</b>, Hao Zhu, Pengfei Yu, Ziyun Wang, Yuan Yao, Zhiyuan Liu, Maosong Sun. FewRel: A Large-Scale Supervised Few-shot Relation Classification Dataset with State-of-the-Art Evaluation. EMNLP 2018. Short paper.</td></tr>
+            <tr><td>4. &nbsp;Ji Xin, Hao Zhu, <b>Xu Han</b>, Zhiyuan Liu, Maosong Sun. Put It Back: Entity Typing with Language Model Enhancement. EMNLP 2018. Short paper.</td></tr>
+            <tr><td>5. &nbsp;Xiaozhi Wang*, <b>Xu Han*</b>, Yankai Lin, Zhiyuan Liu, Maosong Sun (* indicates equal contribution). Adversarial Multi-lingual Neural Relation Extraction. COLING 2018. Long paper.</td></tr>
+            <tr><td>6. &nbsp;<b>Xu Han</b>, Zhiyuan Liu, Maosong Sun. Neural Knowledge Acquisition via Mutual Attention between Knowledge Graph and Text. AAAI 2018. Long paper.</td></tr>
+        </table>
+    </p>
+
+
+
+
 
     <hr/>
 
