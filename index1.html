@@ -2,7 +2,10 @@
 <html>  
 <head>  
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>  
+<script type="text/javascript" src="jquery.js">
+</script>  
+
+
 <title>图片的自动改变</title>  
 </head>  
 <style>  
@@ -10,8 +13,8 @@
         border:1px solid;  
         /*width:7680px;  
         height:5760px;*/
-        width:1024px;  
-        height:768px;
+        width:1600px;  
+        height:1200px;
 
         /*background:url(img/log/each.png);*/
         /*background-size:1024px 768px;*/
@@ -19,7 +22,7 @@
     }  
     .pic_1{  
         position:absolute;
-        border:1px solid;
+        /*border:1px solid;*/
         width:60px;
         height:80px;
         float:right;
@@ -34,7 +37,7 @@
     }
     .pic_2{  
         position:absolute;
-        border:1px solid;
+        /*border:1px solid;*/
         width:54px;
         height:72px;
         float:right;
@@ -58,7 +61,7 @@
     }
     .pic_3{  
         position:absolute;
-        border:1px solid;
+        /*border:1px solid;*/
         width:48px;
         height:64px;
         float:right;
@@ -262,7 +265,7 @@
 
 
         // $("#back").css({ top: height/2-height*0.5/2, left: width/2-width*0.5/2}); 
-        $("#back_img").css({ top: height/2 + 160, left: width / 2 -  $("#back_img").width()/2});  
+        $("#back_img").css({ top: height/2 + 100, left: width / 2 -  $("#back_img").width()/2});  
 
         // +++++++++++++++++++++
 
@@ -431,8 +434,8 @@
         initial_3();
         /*定时器,3秒执行一次showpic函数*/  
         // setInterval(portrait1,3000);                        
-        setInterval(portrait2,3000);
-        setInterval(portrait3,3000);          
+        setInterval(portrait2,5000);
+        setInterval(portrait3,5000);          
     });  
 
     var pos_1 = new Array();
