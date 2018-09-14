@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>  
+<title>图片的自动改变</title>  
+</head>  
+<style>  
+    .main{  
+        border:1px solid;  
+        /*width:7680px;  
+        height:5760px;*/
+        width:1024px;  
+        height:768px;
+
+        /*background:url(img/log/each.png);*/
+        /*background-size:1024px 768px;*/
+        background-repeat:no-repeat;
+    }  
+    .pic_1{  
+        position:absolute;
+        border:1px solid;
+        width:60px;
+        height:80px;
+        float:right;
+    }  
+    .p_1 {
+        position:absolute;
+        text-align:center;
+        width: 65px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+    .pic_2{  
+        position:absolute;
+        border:1px solid;
+        width:54px;
+        height:72px;
+        float:right;
+        width:100%;
+        /*overflow:hidden;*/
+        /*height:0;*/
+        /*padding-bottom: 100%;*/
+        /*background-position: center center;*/
+        /*background-repeat: no-repeat;*/
+        /*-webkit-background-size:cover;
+        -moz-background-size:cover;
+        background-size:cover;*/
+    }  
+    .p_2 {
+        position:absolute;
+        text-align:center;
+        width: 60px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        font-size: 14px;
+    }
+    .pic_3{  
+        position:absolute;
+        border:1px solid;
+        width:48px;
+        height:64px;
+        float:right;
+    }  
+    .p_3 {
+        position:absolute;
+        text-align:center;
+        width: 60px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        font-size: 14px;
+    }
+
+</style>  
+<body>  
+
+<div class="main" id="main">  
+
+    <!-- <div align="middle" id="back" style="position:absolute;width:50%;height:50%;"> -->
+    <img id="back_img" style="position:absolute;width:32%;height:64%;" src="img/log/center.png"/>
+    <!-- </div>   -->
+
+    <div id="p1_0" class="pic_1"><img class="pic_1" id="pi1_0" src="img/log/each.png"/><p id="n1_0" class="p_1"></p></div>  
+    <div id="p1_1" class="pic_1"><img class="pic_1" id="pi1_1" src="img/log/each.png"/><p id="n1_1" class="p_1"></p></div>
+    <div id="p1_2" class="pic_1"><img class="pic_1" id="pi1_2" src="img/log/each.png"/><p id="n1_2" class="p_1"></p></div> 
+    <div id="p1_3" class="pic_1"><img class="pic_1" id="pi1_3" src="img/log/each.png"/><p id="n1_3" class="p_1"></p></div> 
+    <div id="p1_4" class="pic_1"><img class="pic_1" id="pi1_4" src="img/log/each.png"/><p id="n1_4" class="p_1"></p></div> 
+    <div id="p1_5" class="pic_1"><img class="pic_1" id="pi1_5" src="img/log/each.png"/><p id="n1_5" class="p_1"></p></div> 
+    <div id="p1_6" class="pic_1"><img class="pic_1" id="pi1_6" src="img/log/each.png"/><p id="n1_6" class="p_1"></p></div> 
+    <div id="p1_7" class="pic_1"><img class="pic_1" id="pi1_7" src="img/log/each.png"/><p id="n1_7" class="p_1"></p></div> 
+    <div id="p1_8" class="pic_1"><img class="pic_1" id="pi1_8" src="img/log/each.png"/><p id="n1_8" class="p_1"></p></div> 
+    <div id="p1_9" class="pic_1"><img class="pic_1" id="pi1_9" src="img/log/each.png"/><p id="n1_9" class="p_1"></p></div> 
+    <div id="p1_10" class="pic_1"><img class="pic_1" id="pi1_10" src="img/log/each.png"/><p id="n1_10" class="p_1"></p></div>  
+    <div id="p1_11" class="pic_1"><img class="pic_1" id="pi1_11" src="img/log/each.png"/><p id="n1_11" class="p_1"></p></div>
+    <div id="p1_12" class="pic_1"><img class="pic_1" id="pi1_12" src="img/log/each.png"/><p id="n1_12" class="p_1"></p></div> 
+    <div id="p1_13" class="pic_1"><img class="pic_1" id="pi1_13" src="img/log/each.png"/><p id="n1_13" class="p_1"></p></div> 
+    <div id="p1_14" class="pic_1"><img class="pic_1" id="pi1_14" src="img/log/each.png"/><p id="n1_14" class="p_1"></p></div> 
+    <div id="p1_15" class="pic_1"><img class="pic_1" id="pi1_15" src="img/log/each.png"/><p id="n1_15" class="p_1"></p></div> 
+    <div id="p1_16" class="pic_1"><img class="pic_1" id="pi1_16" src="img/log/each.png"/><p id="n1_16" class="p_1"></p></div> 
+    <div id="p1_17" class="pic_1"><img class="pic_1" id="pi1_17" src="img/log/each.png"/><p id="n1_17" class="p_1"></p></div> 
+    <div id="p1_18" class="pic_1"><img class="pic_1" id="pi1_18" src="img/log/each.png"/><p id="n1_18" class="p_1"></p></div> 
+    <div id="p1_19" class="pic_1"><img class="pic_1" id="pi1_19" src="img/log/each.png"/><p id="n1_19" class="p_1"></p></div> 
+
+    <div id="p2_0" class="pic_2"><img class="pic_2" id="pi2_0" src="img/log/each.png"/><p id="n2_0" class="p_2"></p></div>  
+    <div id="p2_1" class="pic_2"><img class="pic_2" id="pi2_1" src="img/log/each.png"/><p id="n2_1" class="p_2"></p></div>
+    <div id="p2_2" class="pic_2"><img class="pic_2" id="pi2_2" src="img/log/each.png"/><p id="n2_2" class="p_2"></p></div> 
+    <div id="p2_3" class="pic_2"><img class="pic_2" id="pi2_3" src="img/log/each.png"/><p id="n2_3" class="p_2"></p></div> 
+    <div id="p2_4" class="pic_2"><img class="pic_2" id="pi2_4" src="img/log/each.png"/><p id="n2_4" class="p_2"></p></div> 
+    <div id="p2_5" class="pic_2"><img class="pic_2" id="pi2_5" src="img/log/each.png"/><p id="n2_5" class="p_2"></p></div> 
+    <div id="p2_6" class="pic_2"><img class="pic_2" id="pi2_6" src="img/log/each.png"/><p id="n2_6" class="p_2"></p></div> 
+    <div id="p2_7" class="pic_2"><img class="pic_2" id="pi2_7" src="img/log/each.png"/><p id="n2_7" class="p_2"></p></div> 
+    <div id="p2_8" class="pic_2"><img class="pic_2" id="pi2_8" src="img/log/each.png"/><p id="n2_8" class="p_2"></p></div> 
+    <div id="p2_9" class="pic_2"><img class="pic_2" id="pi2_9" src="img/log/each.png"/><p id="n2_9" class="p_2"></p></div> 
+    <div id="p2_10" class="pic_2"><img class="pic_2" id="pi2_10" src="img/log/each.png"/><p id="n2_10" class="p_2"></p></div>  
+    <div id="p2_11" class="pic_2"><img class="pic_2" id="pi2_11" src="img/log/each.png"/><p id="n2_11" class="p_2"></p></div>
+    <div id="p2_12" class="pic_2"><img class="pic_2" id="pi2_12" src="img/log/each.png"/><p id="n2_12" class="p_2"></p></div> 
+    <div id="p2_13" class="pic_2"><img class="pic_2" id="pi2_13" src="img/log/each.png"/><p id="n2_13" class="p_2"></p></div> 
+    <div id="p2_14" class="pic_2"><img class="pic_2" id="pi2_14" src="img/log/each.png"/><p id="n2_14" class="p_2"></p></div> 
+    <div id="p2_15" class="pic_2"><img class="pic_2" id="pi2_15" src="img/log/each.png"/><p id="n2_15" class="p_2"></p></div> 
+    <div id="p2_16" class="pic_2"><img class="pic_2" id="pi2_16" src="img/log/each.png"/><p id="n2_16" class="p_2"></p></div> 
+    <div id="p2_17" class="pic_2"><img class="pic_2" id="pi2_17" src="img/log/each.png"/><p id="n2_17" class="p_2"></p></div> 
+    <div id="p2_18" class="pic_2"><img class="pic_2" id="pi2_18" src="img/log/each.png"/><p id="n2_18" class="p_2"></p></div> 
+    <div id="p2_19" class="pic_2"><img class="pic_2" id="pi2_19" src="img/log/each.png"/><p id="n2_19" class="p_2"></p></div> 
+    <div id="p2_20" class="pic_2"><img class="pic_2" id="pi2_20" src="img/log/each.png"/><p id="n2_20" class="p_2"></p></div> 
+    <div id="p2_21" class="pic_2"><img class="pic_2" id="pi2_21" src="img/log/each.png"/><p id="n2_21" class="p_2"></p></div> 
+    <div id="p2_22" class="pic_2"><img class="pic_2" id="pi2_22" src="img/log/each.png"/><p id="n2_22" class="p_2"></p></div> 
+    <div id="p2_23" class="pic_2"><img class="pic_2" id="pi2_23" src="img/log/each.png"/><p id="n2_23" class="p_2"></p></div> 
+    <div id="p2_24" class="pic_2"><img class="pic_2" id="pi2_24" src="img/log/each.png"/><p id="n2_24" class="p_2"></p></div> 
+    <div id="p2_25" class="pic_2"><img class="pic_2" id="pi2_25" src="img/log/each.png"/><p id="n2_25" class="p_2"></p></div> 
+    <div id="p2_26" class="pic_2"><img class="pic_2" id="pi2_26" src="img/log/each.png"/><p id="n2_26" class="p_2"></p></div> 
+    <div id="p2_27" class="pic_2"><img class="pic_2" id="pi2_27" src="img/log/each.png"/><p id="n2_27" class="p_2"></p></div> 
+    <!-- <div id="p2_28" class="pic_2"><img class="pic_2" id="pi2_28" src="img/log/each.png"/><p id="n2_28" class="p_2"></p></div>  -->
+    <!-- <div id="p2_29" class="pic_2"><img class="pic_2" id="pi2_29" src="img/log/each.png"/><p id="n2_29" class="p_2"></p></div>  -->
+
+
+    <div id="p3_0" class="pic_3"><img class="pic_3" id="pi3_0" src="img/log/each.png"/><p id="n3_0" class="p_3"></p></div>  
+    <div id="p3_1" class="pic_3"><img class="pic_3" id="pi3_1" src="img/log/each.png"/><p id="n3_1" class="p_3"></p></div>
+    <div id="p3_2" class="pic_3"><img class="pic_3" id="pi3_2" src="img/log/each.png"/><p id="n3_2" class="p_3"></p></div> 
+    <div id="p3_3" class="pic_3"><img class="pic_3" id="pi3_3" src="img/log/each.png"/><p id="n3_3" class="p_3"></p></div> 
+    <div id="p3_4" class="pic_3"><img class="pic_3" id="pi3_4" src="img/log/each.png"/><p id="n3_4" class="p_3"></p></div> 
+    <div id="p3_5" class="pic_3"><img class="pic_3" id="pi3_5" src="img/log/each.png"/><p id="n3_5" class="p_3"></p></div> 
+    <div id="p3_6" class="pic_3"><img class="pic_3" id="pi3_6" src="img/log/each.png"/><p id="n3_6" class="p_3"></p></div> 
+    <div id="p3_7" class="pic_3"><img class="pic_3" id="pi3_7" src="img/log/each.png"/><p id="n3_7" class="p_3"></p></div> 
+    <div id="p3_8" class="pic_3"><img class="pic_3" id="pi3_8" src="img/log/each.png"/><p id="n3_8" class="p_3"></p></div> 
+    <div id="p3_9" class="pic_3"><img class="pic_3" id="pi3_9" src="img/log/each.png"/><p id="n3_9" class="p_3"></p></div> 
+    <div id="p3_10" class="pic_3"><img class="pic_3" id="pi3_10" src="img/log/each.png"/><p id="n3_10" class="p_3"></p></div>  
+    <div id="p3_11" class="pic_3"><img class="pic_3" id="pi3_11" src="img/log/each.png"/><p id="n3_11" class="p_3"></p></div>
+    <div id="p3_12" class="pic_3"><img class="pic_3" id="pi3_12" src="img/log/each.png"/><p id="n3_12" class="p_3"></p></div> 
+    <div id="p3_13" class="pic_3"><img class="pic_3" id="pi3_13" src="img/log/each.png"/><p id="n3_13" class="p_3"></p></div> 
+    <div id="p3_14" class="pic_3"><img class="pic_3" id="pi3_14" src="img/log/each.png"/><p id="n3_14" class="p_3"></p></div> 
+    <div id="p3_15" class="pic_3"><img class="pic_3" id="pi3_15" src="img/log/each.png"/><p id="n3_15" class="p_3"></p></div> 
+    <div id="p3_16" class="pic_3"><img class="pic_3" id="pi3_16" src="img/log/each.png"/><p id="n3_16" class="p_3"></p></div> 
+    <div id="p3_17" class="pic_3"><img class="pic_3" id="pi3_17" src="img/log/each.png"/><p id="n3_17" class="p_3"></p></div> 
+    <div id="p3_18" class="pic_3"><img class="pic_3" id="pi3_18" src="img/log/each.png"/><p id="n3_18" class="p_3"></p></div> 
+    <div id="p3_19" class="pic_3"><img class="pic_3" id="pi3_19" src="img/log/each.png"/><p id="n3_19" class="p_3"></p></div> 
+    <div id="p3_20" class="pic_3"><img class="pic_3" id="pi3_20" src="img/log/each.png"/><p id="n3_20" class="p_3"></p></div> 
+    <div id="p3_21" class="pic_3"><img class="pic_3" id="pi3_21" src="img/log/each.png"/><p id="n3_21" class="p_3"></p></div> 
+    <div id="p3_22" class="pic_3"><img class="pic_3" id="pi3_22" src="img/log/each.png"/><p id="n3_22" class="p_3"></p></div> 
+    <div id="p3_23" class="pic_3"><img class="pic_3" id="pi3_23" src="img/log/each.png"/><p id="n3_23" class="p_3"></p></div> 
+    <div id="p3_24" class="pic_3"><img class="pic_3" id="pi3_24" src="img/log/each.png"/><p id="n3_24" class="p_3"></p></div> 
+    <div id="p3_25" class="pic_3"><img class="pic_3" id="pi3_25" src="img/log/each.png"/><p id="n3_25" class="p_3"></p></div> 
+    <div id="p3_26" class="pic_3"><img class="pic_3" id="pi3_26" src="img/log/each.png"/><p id="n3_26" class="p_3"></p></div> 
+    <div id="p3_27" class="pic_3"><img class="pic_3" id="pi3_27" src="img/log/each.png"/><p id="n3_27" class="p_3"></p></div> 
+    <div id="p3_28" class="pic_3"><img class="pic_3" id="pi3_28" src="img/log/each.png"/><p id="n3_28" class="p_3"></p></div> 
+    <div id="p3_29" class="pic_3"><img class="pic_3" id="pi3_29" src="img/log/each.png"/><p id="n3_29" class="p_3"></p></div>
+
+    <div id="p3_30" class="pic_3"><img class="pic_3" id="pi3_30" src="img/log/each.png"/><p id="n3_30" class="p_3"></p></div> 
+    <div id="p3_31" class="pic_3"><img class="pic_3" id="pi3_31" src="img/log/each.png"/><p id="n3_31" class="p_3"></p></div> 
+    <div id="p3_32" class="pic_3"><img class="pic_3" id="pi3_32" src="img/log/each.png"/><p id="n3_32" class="p_3"></p></div> 
+    <div id="p3_33" class="pic_3"><img class="pic_3" id="pi3_33" src="img/log/each.png"/><p id="n3_33" class="p_3"></p></div> 
+    <div id="p3_34" class="pic_3"><img class="pic_3" id="pi3_34" src="img/log/each.png"/><p id="n3_34" class="p_3"></p></div> 
+    <div id="p3_35" class="pic_3"><img class="pic_3" id="pi3_35" src="img/log/each.png"/><p id="n3_35" class="p_3"></p></div> 
+    <div id="p3_36" class="pic_3"><img class="pic_3" id="pi3_36" src="img/log/each.png"/><p id="n3_36" class="p_3"></p></div> 
+    <div id="p3_37" class="pic_3"><img class="pic_3" id="pi3_37" src="img/log/each.png"/><p id="n3_37" class="p_3"></p></div> 
+    <div id="p3_38" class="pic_3"><img class="pic_3" id="pi3_38" src="img/log/each.png"/><p id="n3_38" class="p_3"></p></div> 
+    <div id="p3_39" class="pic_3"><img class="pic_3" id="pi3_39" src="img/log/each.png"/><p id="n3_39" class="p_3"></p></div> 
+    
+    <div id="p3_40" class="pic_3"><img class="pic_3" id="pi3_40" src="img/log/each.png"/><p id="n3_40" class="p_3"></p></div> 
+    <div id="p3_41" class="pic_3"><img class="pic_3" id="pi3_41" src="img/log/each.png"/><p id="n3_41" class="p_3"></p></div> 
+    <div id="p3_42" class="pic_3"><img class="pic_3" id="pi3_42" src="img/log/each.png"/><p id="n3_42" class="p_3"></p></div> 
+    <div id="p3_43" class="pic_3"><img class="pic_3" id="pi3_43" src="img/log/each.png"/><p id="n3_43" class="p_3"></p></div> 
+    <div id="p3_44" class="pic_3"><img class="pic_3" id="pi3_44" src="img/log/each.png"/><p id="n3_44" class="p_3"></p></div> 
+    <div id="p3_45" class="pic_3"><img class="pic_3" id="pi3_45" src="img/log/each.png"/><p id="n3_45" class="p_3"></p></div> 
+    <div id="p3_46" class="pic_3"><img class="pic_3" id="pi3_46" src="img/log/each.png"/><p id="n3_46" class="p_3"></p></div> 
+    <div id="p3_47" class="pic_3"><img class="pic_3" id="pi3_47" src="img/log/each.png"/><p id="n3_47" class="p_3"></p></div> 
+    <!-- <div id="p3_48" class="pic_3"><img class="pic_3" id="pi3_48" src="img/log/each.png"/><p id="n3_48" class="p_3"></p></div> 
+    <div id="p3_49" class="pic_3"><img class="pic_3" id="pi3_49" src="img/log/each.png"/><p id="n3_49" class="p_3"></p></div> 
+    <div id="p3_50" class="pic_3"><img class="pic_3" id="pi3_50" src="img/log/each.png"/><p id="n3_50" class="p_3"></p></div> 
+    <div id="p3_51" class="pic_3"><img class="pic_3" id="pi3_51" src="img/log/each.png"/><p id="n3_51" class="p_3"></p></div> 
+    <div id="p3_52" class="pic_3"><img class="pic_3" id="pi3_52" src="img/log/each.png"/><p id="n3_52" class="p_3"></p></div> 
+    <div id="p3_53" class="pic_3"><img class="pic_3" id="pi3_53" src="img/log/each.png"/><p id="n3_53" class="p_3"></p></div> 
+    <div id="p3_54" class="pic_3"><img class="pic_3" id="pi3_54" src="img/log/each.png"/><p id="n3_54" class="p_3"></p></div> 
+    <div id="p3_55" class="pic_3"><img class="pic_3" id="pi3_55" src="img/log/each.png"/><p id="n3_55" class="p_3"></p></div> 
+    <div id="p3_56" class="pic_3"><img class="pic_3" id="pi3_56" src="img/log/each.png"/><p id="n3_56" class="p_3"></p></div> 
+    <div id="p3_57" class="pic_3"><img class="pic_3" id="pi3_57" src="img/log/each.png"/><p id="n3_57" class="p_3"></p></div> 
+    <div id="p3_58" class="pic_3"><img class="pic_3" id="pi3_58" src="img/log/each.png"/><p id="n3_58" class="p_3"></p></div> 
+    <div id="p3_59" class="pic_3"><img class="pic_3" id="pi3_59" src="img/log/each.png"/><p id="n3_59" class="p_3"></p></div> 
+    <div id="p3_60" class="pic_3"><img class="pic_3" id="pi3_60" src="img/log/each.png"/><p id="n3_60" class="p_3"></p></div> 
+    <div id="p3_61" class="pic_3"><img class="pic_3" id="pi3_61" src="img/log/each.png"/><p id="n3_61" class="p_3"></p></div> 
+    <div id="p3_62" class="pic_3"><img class="pic_3" id="pi3_62" src="img/log/each.png"/><p id="n3_62" class="p_3"></p></div> 
+    <div id="p3_63" class="pic_3"><img class="pic_3" id="pi3_63" src="img/log/each.png"/><p id="n3_63" class="p_3"></p></div>  -->
+</div>
+
+
+<div id="showOffSet"></div>  
+<script type="text/javascript">  
+
+    /*定义图片位置*/  
+    var p1=new Array("钟士模.jpg", "凌瑞骥.jpg", "李衍达.jpg", "李三立.jpg", "张钹.jpg", "欧阳钟灿.png", "姚期智.jpg", "孙家广.jpg", "李伯虎.jpg", "吴宏鑫.jpg", "戴浩.jpg", "方滨兴.png", "张尧学.jpg", "吴建平.jpg", "廖湘科.jpg", "王小云.png", "郭毅可.jpg", "陈元.jpg", "楼继伟.jpg", "张福森.png");  
+    var p1_list=new Array("1956年到组", "1956年到组", "1959届", "1958年到系", "1958届", "1969届", "2011年到系", "1970届", "1960届", "1965届", "1969届", "1981级硕", "1990年到系", "1973级", "1980级", "2005年到系", "1980级", "1970届", "1977级", "1965届");
+    var pos1 = 0;
+
+    var p2=new Array("杨天行.jpg", "缪道期.jpg", "谭浩强.jpg", "谢锡迎.jpg", "王友彭.jpg", "杨歧.jpg", "徐伯权.jpg", "严晓蒸.jpg", "殷子烈.jpg", "李晔.jpg", "孙凝生.jpg", "白拜尔.jpg", "林馥卿.jpg", "张洁瑜.jpg", "金德琨.jpg", "赵树阁.jpg", "栾贵兴.jpg", "王道修.jpg", "张国煊.png", "孙承鑑.jpg", "华平澜.jpg", "杨明炯.jpg", "张翊釭.jpg", "郝春民.jpg", "印甫盛.jpg", "张轴材.jpg", "龚传信.jpg", "陈静.jpg", "祁力群.png", "单怀光.jpg", "李铁林.jpg", "马颂德.jpg", "张华祝.jpg", "唐建邦.jpg", "瞿振元.jpg", "葛进宝.jpg", "尚文锦.jpg", "姜大源.jpg", "徐小岩.jpg", "赵金云.jpg", "杨月仙.png", "彭春龙.jpg", "张祖英.jpg", "李玉琢.jpg", "贾春生.jpg", "梁卫国.jpg", "徐惠民.jpg", "汪正祥.jpg", "孙大奇.png", "潘毅.png", "李亚民.jpg", "杨元元.jpg", "党建武.png", "程京德.jpg", "侯紫峰.jpg", "白硕.jpg", "樊郊.jpg");  
+    var p2_list=new Array("1957届", "1958届", "1958届", "1959届", "1959届", "1959届", "1959届", "1959届", "1960届", "1960届", "1960届", "1962届", "1962届", "1963届", "1963届", "1963届", "1963届", "1964届", "1964届", "1965届", "1965届", "1965届", "1965届", "1966届", "1967届", "1967届", "1967届", "1968届", "1968届", "1968届", "1969届", "1969届", "1969届", "1970届", "1970届", "1970届", "1970届", "1970届", "1972级", "1972级", "1972级", "1973级", "1973级", "1973级", "1974级", "1974级", "1975级", "1976级", "1977级", "1977级", "1977级", "1977级", "1977级", "1977级", "1977级", "1977级", "1977级");
+    var pos2 = 0;
+
+    var p3 = new Array("张振清.png", "徐航.jpg", "薛京灵.jpg", "章伟雄.png", "蔡黎明.png", "完强.png", "徐挺.png", "宫力.png", "张玉志.jpg", "林德康.jpg", "李克勤.png", "张建伟.png", "曾宪奕.jpg", "茅为真.png", "徐亚君.jpg", "李波.jpg", "黄学东.jpg", "邹北骥.png", "刘文印.jpg", "刘晓林.png", "王敏.png", "宋海燕.png", "侯若洪.jpg", "朱志刚.jpg", "闵卫东.png", "吴军.png", "李竹.jpg", "刘秀文.png", "吴东军.png", "张志红.png", "史青.png", "张鑫.jpg", "郑海清.png", "黄松浪.jpg", "姜峰.jpg", "曹培.jpg", "孟洛明.jpg", "乔松.jpg", "李建航.jpg", "方黎江.jpg", "诸葛越.png", "李成.jpg", "杨鹏飞.png", "周海.jpg", "刘燕虹.png", "张晴.jpg", "杨阳.jpg", "李晨.png", "顾险峰.jpg", "王雅琳.png", "王雷.jpg", "许志翰.jpg", "羊东.jpg", "李向阳.png", "李葆春.png", "李康.jpg", "王田苗.jpg", "田范江.jpg", "朱国平.png", "张俊波.jpg", "安婷.jpg", "周明.jpg", "黄扬清.png", "杨睿刚.jpg", "谭焜.jpg", "陈世敏.png", "许颢颖.jpg", "刘炜.png", "王帆.jpg", "郄小虎.jpg", "廖春元.png", "周霖.jpg", "王昱.jpeg", "王欲甦.jpg", "司罗.png", "纪平.jpg", "陈咏.jpg", "王伟超.jpg", "刘江川.png", "郭锐.png", "欧新明.jpg", "张奕.jpg", "李宗鹏.jpg", "谭刚.jpg", "黄晓蕾.jpg", "褚晓文.png", "鲁爱东.jpg", "杨峻峰.png", "吕琴.png", "王小川.png", "周枫.png", "庄莉.png", "宋睿华.png", "吴川.jpg", "张小沛.jpg", "沈思.jpg", "王鹏.png", "魏晓亮.png", "易珂.jpg", "方辉.jpg", "黄兹.jpg", "孙晓明.jpg", "武延军.png", "牛奎光.png", "傅晓明.png", "汪国平.jpg", "林凡.png", "茹立云.png", "杨亚俊.jpg", "杨洪涛.png", "段润尧.jpg", "李闽溟.jpg", "季铮锋.jpg", "许主洪.png", "庄丽.jpg", "王新兵.jpg", "陶建华.jpg", "王晓英.png", "靳力.png", "李江波.jpg", "石润婷.png", "张岳.jpg", "来煜坤.jpg", "鄂威.png", "张胜誉.jpg", "齐伟.png", "郑晓博.png", "陈婧.jpg", "李默.jpg", "王曦.png", "曾柏毅.png", "庞一.jpg", "陆品燕.jpg", "刘方明.jpg", "麻晓娟.jpg", "崔鹤鸣.png", "李锡荣.jpg", "姜皓.png", "方存好.png", "冯元.jpg", "朱东海.jpg", "李三江.jpg", "曹毅.png", "邓嘉.png", "周文超.jpg", "姚岱.jpg", "单志广.png", "楚科纬.png", "蓝晏翔.jpg", "王宏宁.png", "陈汐.jpg", "鬲融.jpg", "贝小辉.png", "楼天城.png", "周源.png", "胡伟栋.jpg", "蒋朦.jpg", "谭宸浩.jpg", "印奇.png", "唐文斌.png", "张永锋.png", "程明明.jpg");
+    var p3_list = new Array("1979级", "1979级", "1979级", "1979级", "1979级", "1979级", "1979级", "1980级", "1980级", "1980级", "1980级", "1981级", "1981级", "1981级", "1982级", "1982级", "1982级硕", "1982级硕", "1983级", "1983级", "1983级", "1983级", "1983级", "1983级", "1984级", "1984级", "1984级", "1984级", "1984级", "1984级", "1984级", "1984级", "1985级", "1985级", "1985级", "1985级", "1985级硕", "1986级", "1986级", "1986级", "1986级", "1987级", "1987级", "1987级", "1987级硕", "1988级", "1988级", "1989级", "1989级", "1989级", "1989级", "1990级", "1990级", "1990级", "1990级", "1990级", "1990博后", "1991级", "1991级", "1991级", "1991级", "1991博后", "1992级", "1992级", "1992级", "1992级", "1992级", "1992级", "1993级", "1993级", "1993级", "1993级", "1993级", "1993级", "1993级", "1993级", "1993级", "1993级", "1994级", "1994级", "1994级", "1994级", "1994级", "1994级", "1994级", "1994级", "1995级", "1995级", "1995级", "1996级", "1996级", "1996级", "1996级", "1996级", "1996级硕", "1997级", "1997级", "1997级", "1997级", "1997级", "1997级", "1997级", "1997级", "1997级", "1997级博", "1997博后", "1998级", "1998级", "1998级", "1998级", "1998级", "1998级", "1998级", "1998级", "1998级", "1998级硕", "1998级博", "1999级", "1999级", "1999级", "1999级", "1999级", "1999级", "1999级", "1999级硕", "2000级", "2000级", "2000级", "2000级", "2000级", "2000级", "2001级", "2001级", "2001级", "2001级", "2001级", "2001级", "2001级", "2001级博", "2001级博", "2001博后", "2001博后", "2002级", "2002级", "2002级", "2002级", "2002博后", "2003级", "2003级", "2003级", "2003级博", "2004级", "2004级", "2004级", "2005级", "2005级", "2006级", "2006级", "2006级", "2006级", "2007级", "2007级博");
+    var pos3 = 0;
+
+
+    $(document).ready(function(){  
+        var offset = $("#main").offset();  
+        var myTop = offset.top;  
+        var myLeft = offset.left;  
+        var height = $("#main").height();
+        var width = $("#main").width();
+
+        var scale = height / 900.0;
+        
+        var pic_1_height = 100 * scale;
+        var pic_1_width = 75 * scale;
+        var pic_1_margin = 10 * scale;
+        var pic_1_margin_down = 40 * scale;
+
+        var pic_2_height = 84 * scale;
+        var pic_2_width = 63 * scale;
+        var pic_2_margin = 10 * scale;
+        var pic_2_margin_down = 40 * scale;
+        var off_2 = 0 * scale;
+
+        var pic_3_height = 68 * scale;
+        var pic_3_width = 51 * scale;
+        var pic_3_margin = 10 * scale;
+        var pic_3_margin_down = 40 * scale;
+        var off_3 = 20 * scale;
+
+
+        $('.pic_1').width(pic_1_width);
+        $('.pic_1').height(pic_1_height);
+
+        $('.pic_2').width(pic_2_width);
+        $('.pic_2').height(pic_2_height);
+
+        $('.pic_3').width(pic_3_width);
+        $('.pic_3').height(pic_3_height);
+
+        $('.p_1').width(pic_1_width);
+        $('.p_2').width(pic_2_width);
+        $('.p_3').width(pic_3_width);
+
+
+        // $("#back").css({ top: height/2-height*0.5/2, left: width/2-width*0.5/2}); 
+        $("#back_img").css({ top: height/2 + 160, left: width / 2 -  $("#back_img").width()/2});  
+
+        // +++++++++++++++++++++
+
+        
+        var topv = myTop + height /2 - pic_2_height- pic_2_height*(6-1)/2- pic_2_margin_down*(6)/2 + off_2;//myTop + height /2 - pic_1_height- pic_1_height*3/2- pic_1_margin_down*(4)/2;
+        for (var j = 0; j < 4; j++) {
+            var leftv = myLeft + width / 2 - pic_1_width*5/2 - pic_1_margin*(5-1)/2;
+        for (var i = 0; i < 5; i++){
+            var name = "#p1_" + (i + j *5);
+            var name1 = "#n1_" + (i+ j *5);
+            $(name).css({ top: topv, left: leftv});  
+            $(name1).css({ top: pic_1_height, left: 0}); 
+            leftv += pic_1_width + pic_1_margin;
+        }
+            topv += pic_1_height + pic_1_margin_down ;
+        }
+
+        // var leftv = myLeft + width / 2 - pic_1_width*5/2 - pic_1_margin*(5-1)/2;
+        // var topv = myTop + height /2 + pic_1_height*3/2 + pic_1_margin_down*(4)/2;
+        // for (var i = 5; i < 10; i++){
+        //     var name = "#p1_" + i;
+        //     var name1 = "#n1_" + i;
+        //     $(name).css({ top: topv, left: leftv});  
+        //     $(name1).css({ top: pic_1_height, left: 0}); 
+        //     leftv += pic_1_width + pic_1_margin;
+        // }
+
+        // var leftv = myLeft + width / 2 - pic_1_width*5/2 - pic_1_margin*(5-1)/2 ;
+        // var topv = myTop + height /2 - pic_1_height- pic_1_height*3/2- pic_1_margin_down*(4)/2 + pic_1_height + pic_1_margin_down;
+        // for (var i = 10; i < 13; i++){
+        //     var name = "#p1_" + i;
+        //     var name1 = "#n1_" + i;
+        //     $(name).css({ top: topv, left: leftv});  
+        //     $(name1).css({ top: pic_1_height, left: 0}); 
+        //     topv += pic_1_height + pic_1_margin_down ;
+        // }
+
+        // var leftv = myLeft + width / 2 - pic_1_width*5/2 - pic_1_margin*(5-1)/2 - pic_1_margin - pic_1_width + pic_1_width * 5 + pic_1_margin * 5;
+        // var topv = myTop + height /2 - pic_1_height- pic_1_height*3/2- pic_1_margin_down*(4)/2 + pic_1_height + pic_1_margin_down;
+        // for (var i = 13; i < 16; i++){
+        //     var name = "#p1_" + i;
+        //     var name1 = "#n1_" + i;
+        //     $(name).css({ top: topv, left: leftv});  
+        //     $(name1).css({ top: pic_1_height, left: 0}); 
+        //     topv += pic_1_height + pic_1_margin_down ;
+        // }
+
+
+        // var leftv = myLeft + width / 2 - pic_1_width*5/2 - pic_1_margin*(5-1)/2  + pic_1_margin + pic_1_width;
+        // var topv = myTop + height /2 - pic_1_height- pic_1_height*3/2- pic_1_margin_down*(4)/2 + pic_1_height + pic_1_margin_down;
+        // for (var i = 16; i < 18; i++){
+        //     var name = "#p1_" + i;
+        //     var name1 = "#n1_" + i;
+        //     $(name).css({ top: topv, left: leftv});  
+        //     $(name1).css({ top: pic_1_height, left: 0}); 
+        //     topv += pic_1_height + pic_1_margin_down + pic_1_height + pic_1_margin_down;
+        // }
+
+        // var leftv = myLeft + width / 2 - pic_1_width*5/2 - pic_1_margin*(5-1)/2 - pic_1_margin - pic_1_width + pic_1_width * 5 + pic_1_margin * 5 - pic_1_margin - pic_1_width;
+        // var topv = myTop + height /2 - pic_1_height- pic_1_height*3/2- pic_1_margin_down*(4)/2 + pic_1_height + pic_1_margin_down;
+        // for (var i = 18; i < 20; i++){
+        //     var name = "#p1_" + i;
+        //     var name1 = "#n1_" + i;
+        //     $(name).css({ top: topv, left: leftv});  
+        //     $(name1).css({ top: pic_1_height, left: 0}); 
+        //     topv += pic_1_height + pic_1_margin_down + pic_1_height + pic_1_margin_down;
+        // }
+
+        // ++++++++++++++++++++++++++
+
+        // var leftv = myLeft + width / 2 - pic_2_width*10/2 - pic_2_margin*(10-1)/2;
+        // var topv = myTop + height /2 - pic_1_height- pic_1_height*3/2- pic_1_margin_down*(4)/2 - pic_2_margin_down - pic_2_height;
+        // for (var i = 0; i < 10; i++){
+        //     var name = "#p2_" + i;
+        //     var name1 = "#n2_" + i;
+        //     $(name).css({ top: topv, left: leftv});  
+        //     $(name1).css({ top: pic_2_height, left: 0}); 
+        //     leftv += pic_2_width + pic_2_margin;
+        // }
+
+        // var leftv = myLeft + width / 2 - pic_2_width*10/2 - pic_2_margin*(10-1)/2;
+        // var topv = myTop + height /2 + pic_1_height*3/2 + pic_1_margin_down*(4)/2 + pic_1_margin_down + pic_1_height;
+        // for (var i = 10; i < 20; i++){
+        //     var name = "#p2_" + i;
+        //     var name1 = "#n2_" + i;
+        //     $(name).css({ top: topv, left: leftv});  
+        //     $(name1).css({ top: pic_2_height, left: 0}); 
+        //     leftv += pic_2_width + pic_2_margin;
+        // }
+
+        var leftv = myLeft + width / 2 - pic_1_width*5/2 - pic_1_margin*(5-1)/2 - pic_2_margin * 2 - pic_2_width * 2 - pic_1_margin;
+        var topv = myTop + height /2 - pic_2_height- pic_2_height*(6-1)/2- pic_2_margin_down*(6)/2 + off_2;
+        for (var i = 0; i < 7; i++){
+            var name = "#p2_" + i;
+            var name1 = "#n2_" + i;
+            $(name).css({ top: topv, left: leftv});  
+            $(name1).css({ top: pic_2_height, left: 0}); 
+            topv += pic_2_height + pic_2_margin_down + off_2;
+        }
+
+        var leftv = myLeft + width / 2 - pic_1_width*5/2 - pic_1_margin*(5-1)/2 - pic_2_margin  - pic_2_width - pic_1_margin;
+        var topv = myTop + height /2 - pic_2_height- pic_2_height*(6-1)/2- pic_2_margin_down*(6)/2 + off_2;
+        for (var i = 7; i < 14; i++){
+            var name = "#p2_" + i;
+            var name1 = "#n2_" + i;
+            $(name).css({ top: topv, left: leftv});  
+            $(name1).css({ top: pic_2_height, left: 0}); 
+            topv += pic_2_height + pic_2_margin_down + off_2;
+        }
+
+        var leftv = myLeft + width / 2 + pic_1_width*5/2 + pic_1_margin*(5-1)/2  + pic_1_margin + pic_2_margin;
+        var topv = myTop + height /2 - pic_2_height- pic_2_height*(6-1)/2- pic_2_margin_down*(6)/2 + off_2;
+
+        for (var i = 14; i < 21; i++){
+            var name = "#p2_" + i;
+            var name1 = "#n2_" + i;
+            $(name).css({ top: topv, left: leftv});  
+            $(name1).css({ top: pic_2_height, left: 0}); 
+            topv += pic_2_height + pic_2_margin_down + off_2;
+        }
+
+        var leftv = myLeft + width / 2 + pic_1_width*5/2 + pic_1_margin*(5-1)/2 + pic_2_margin * 2 + pic_2_width  + pic_1_margin; 
+        var topv = myTop + height /2 - pic_2_height- pic_2_height*(6-1)/2- pic_2_margin_down*(6)/2 + off_2;
+
+        for (var i = 21; i < 28; i++){
+            var name = "#p2_" + i;
+            var name1 = "#n2_" + i;
+            $(name).css({ top: topv, left: leftv});  
+            $(name1).css({ top: pic_2_height, left: 0}); 
+            topv += pic_2_height + pic_2_margin_down + off_2;
+        }
+
+
+
+
+        // ++++++++++++++++++++++++++
+
+        // var leftv = myLeft + width / 2 - pic_2_width*10/2 - pic_2_margin*(10-1)/2;
+        var topv = myTop + height /2 - pic_3_height*(8)/2- pic_3_margin_down*(8-1)/2;
+        for (var i = 0; i < 8; i++){
+            var leftv = myLeft + width / 2 - pic_1_width*5/2 - pic_1_margin*(5-1)/2 - pic_2_margin * 2 - pic_2_width * 2 - pic_1_margin - pic_3_width * 3 - pic_3_margin * 3 - off_3;
+            for (var j = 0; j < 3; j++) {
+                var name = "#p3_" + (i*3+j);
+                var name1 = "#n3_" + (i*3+j);
+                $(name).css({ top: topv, left: leftv});  
+                $(name1).css({ top: pic_3_height, left: 0}); 
+                leftv += pic_3_width + pic_3_margin;
+            }
+            topv += pic_3_height+pic_3_margin_down;
+        }
+
+        var topv = myTop + height /2 - pic_3_height*(8)/2- pic_3_margin_down*(8-1)/2;
+        for (var i = 0; i < 8; i++){
+            var leftv = myLeft + width / 2 + pic_1_width*5/2 + pic_1_margin*(5-1)/2 + pic_2_margin * 2 + pic_2_width * 2  + pic_1_margin + pic_3_margin + off_3;
+            for (var j = 0; j < 3; j++) {
+                var name = "#p3_" + (i*3+j+24);
+                var name1 = "#n3_" + (i*3+j+24);
+                $(name).css({ top: topv, left: leftv});  
+                $(name1).css({ top: pic_3_height, left: 0}); 
+                leftv += pic_3_width + pic_3_margin;
+            }
+            topv += pic_3_height+pic_3_margin_down;
+        }
+        initial_1();
+        initial_2();
+        initial_3();
+        /*定时器,3秒执行一次showpic函数*/  
+        // setInterval(portrait1,3000);                        
+        setInterval(portrait2,3000);
+        setInterval(portrait3,3000);          
+    });  
+
+    var pos_1 = new Array();
+    var pos_1_list = new Array();
+
+    function initial_1() {
+        for (var i = 0; i < 20; i++) {
+            pos_1.push(0);
+            pos_1_list.push(i);
+        }
+        portrait1_random(0, 20);
+        for (var i = 0; i < 20; i++) {
+            var name = "#pi1_" + i; 
+            var name1 = "#n1_" + i;
+            work_pic1(name, name1, i)
+        }
+    }
+
+    var pos_2 = new Array();
+    var pos_2_list = new Array();
+
+    function initial_2() {
+        for (var i = 0; i < 28; i++) {
+            pos_2.push(0);
+            pos_2_list.push(i);
+        }
+        portrait2_random(0, 28);
+        for (var i = 0; i < 28; i++) {
+            var name = "#pi2_" + i; 
+            var name1 = "#n2_" + i;
+            work_pic2(name, name1, i)
+        }
+    }
+
+    var pos_3 = new Array();
+    var pos_3_list = new Array();
+
+    function initial_3() {
+        for (var i = 0; i < 48; i++) {
+            pos_3.push(0);
+            pos_3_list.push(i);
+        }
+        portrait3_random(0, 48);
+        for (var i = 0; i < 48; i++) {
+            var name = "#pi3_" + i; 
+            var name1 = "#n3_" + i;
+            work_pic3(name, name1, i)
+        }
+    }
+
+    function portrait2_random(lef, rig){
+            var aa = rig - lef;
+            for (var i = lef; i < rig; i++) {
+                var tmp = Math.floor((Math.random()*aa))+lef;
+                var tmpj = pos_2_list[i];
+                pos_2_list[i] = pos_2_list[tmp];
+                pos_2_list[tmp] = tmpj;
+            }
+    }
+
+    function portrait3_random(lef, rig){
+            var aa = rig - lef;
+            for (var i = lef; i < rig; i++) {
+                var tmp = Math.floor((Math.random()*aa))+lef;
+                var tmpj = pos_1_list[i];
+                pos_3_list[i] = pos_3_list[tmp];
+                pos_3_list[tmp] = tmpj;
+            }
+    }
+
+    function portrait1_random(lef, rig){
+            var aa = rig - lef;
+            for (var i = lef; i < rig; i++) {
+                var tmp = Math.floor((Math.random()*aa))+lef;
+                var tmpj = p3[i];
+                p3[i] = p3[tmp];
+                p3[tmp] = tmpj;
+                var tmpj = p3_list[i];
+                p3_list[i] = p3_list[tmp];
+                p3_list[tmp] = tmpj;
+            }
+    }
+
+    function work_pic1(name, name1, pos1) {
+                    var nam = "";
+                    if (p1[pos1].split('.')[0].length==2)
+                        nam = nam + p1[pos1].split('.')[0][0]+"  "+p1[pos1].split('.')[0][1];
+                    else
+                        nam = nam + p1[pos1].split('.')[0];
+                    if (p1_list[pos1].length==0)
+                        nam = nam;
+                    else
+                        nam = nam +"<br/>"+p1_list[pos1]+"";
+        $(name).fadeOut(1000,function(){
+                    $(name).attr("src",'img/1/'+p1[pos1]); 
+                    $(name1).html(nam);                     
+                    $(name).fadeIn(1600);  
+        });
+    }
+
+    function work_pic2(name, name1, pos3) {
+        $(name).fadeOut(1000,function(){  
+                    $(name).attr("src",'img/2/'+p2[pos3]); 
+                    if (p2[pos3].split('.')[0].length==2) {
+                        $(name1).html(p2[pos3].split('.')[0][0]+"  "+p2[pos3].split('.')[0][1]+"<br/>"+p2_list[pos3]+""); 
+                    } else {
+                        $(name1).html(p2[pos3].split('.')[0]+"<br/>"+p2_list[pos3]+""); 
+                    }
+                    $(name).fadeIn(1600);  
+                });  
+    }
+
+    function work_pic3(name, name1, pos3) {
+        $(name).fadeOut(1000,function(){  
+                    $(name).attr("src",'img/3/'+p3[pos3]); 
+                    if (p3[pos3].split('.')[0].length==2) {
+                        $(name1).html(p3[pos3].split('.')[0][0]+"  "+p3[pos3].split('.')[0][1]+"<br/>"+p3_list[pos3]+""); 
+                    } else {
+                        $(name1).html(p3[pos3].split('.')[0]+"<br/>"+p3_list[pos3]+""); 
+                    }
+                    $(name).fadeIn(1600);  
+                });  
+    }
+
+
+    function portrait1(){
+            // portrait1_random();
+            // for (var i = 0; i < p1.length; i++){
+            //     var name = "#pi1_" + i; 
+            //     var name1 = "#n1_" + i;
+            //     pos1 = (pos1 + 1)%p1.length;
+            //     work(name, name1, pos1)
+            // } 
+    }  
+
+    function work2(i) {
+                i = pos_2_list[i];
+                var name = "#pi2_" + (i); 
+                var name1 = "#n2_" + (i);
+                pos_2[i]+=1;
+                var pos_tmp = (i+pos_2[i]*28);
+                if (pos_tmp >= p2.length) {
+                    pos_2[i] = 0;
+                    pos_tmp = (i+pos_2[i]*28);                    
+                }
+                work_pic2(name, name1, pos_tmp);
+    }
+
+    function portrait2(){
+            for (var i = pos2 * 8; i < pos2*8+8; i++) {
+                work2(i % 28);
+            }
+            pos2 = (pos2 + 1) % 4;
+    }
+
+    function work3(i) {
+                i = pos_3_list[i];
+                var name = "#pi3_" + (i); 
+                var name1 = "#n3_" + (i);
+                pos_3[i]+=1;
+                var pos_tmp = (i+pos_3[i]*48);
+                if (pos_tmp >= p3.length) {
+                    pos_3[i] = 0;
+                    pos_tmp = (i+pos_3[i]*48);                    
+                }
+                work_pic3(name, name1, pos_tmp);
+    }
+
+    function portrait3(){
+            for (var i = pos3 * 16; i < pos3*16+16; i++) {
+                work3(i % 48);
+            }
+            pos3 = (pos3 + 1) % 3;
+    }
+
+</script>  
+</body>  
+</html> 
